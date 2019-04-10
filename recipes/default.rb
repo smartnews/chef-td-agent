@@ -61,7 +61,7 @@ when "ubuntu"
     uri source
     distribution dist
     components ["contrib"]
-    key "http://packages.treasuredata.com/GPG-KEY-td-agent"
+    key node["td_agent"]["gpgkey"]
     action :add
   end
 when "centos", "redhat", "amazon"
@@ -75,7 +75,7 @@ when "centos", "redhat", "amazon"
 
   yum_repository "treasure-data" do
     url source
-    gpgkey "http://packages.treasuredata.com/GPG-KEY-td-agent"
+    gpgkey node["td_agent"]["gpgkey"]
     action :add
   end
 end

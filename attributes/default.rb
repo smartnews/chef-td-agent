@@ -1,4 +1,5 @@
 default["td_agent"]["api_key"] = ''
+default["td_agent"]["gpgkey"] = 'http://packages.treasuredata.com/GPG-KEY-td-agent'
 
 default["td_agent"]["plugins"] = []
 
